@@ -1,0 +1,117 @@
+Use Case 1 
+Power :  9-volt battery will provide approximately 25-30 hours of operation	
+
+Use Case 2:
+Battery level 
+ Main success scenario: 
+	1.turn on unit 
+	2. waiting  2 minutes to choose session `
+	3. take up 1 seconds running a session
+4. turn off (hold power button) at any time 
+
+use Case 3:
+ ENDING A SESSION
+
+Use Case 4:
+SELECTING A SESSION
+
+Use Case 5
+Connection Test
+
+Use Case 6 
+ADJUSTING INTENSITY
+
+
+
+
+
+
+—（草稿）
+Use case1 : (Basic use case)
+software-based prototype of a CES device
+
+Primary Actor: user
+Goal in Context:The user wants to use the treatment service.
+Scope: CES device
+Level: SUMMAY
+actors:
+User: wants to use the treatment service
+CES: Control function
+Precondition: CES devices are running properly
+Main Success Scenario and sub-steps:
+1. User Connect power
+2. User Placement of electrodes
+(1) Oasis Pro checks the electrical connection, Blinking CES Mode light
+(2) Until the connection is successful: CES Mode light disappear. [R] and [L] light on.
+(3) Users wet their earlobes with a small amount of conductive gel and wear a black clip in their left ear and a red clip in their right ear
+3. The user presses the power button
+(1) The power light comes on, showing the battery level;
+(2) If no treatment is selected within two minutes, power off
+4. The user selects session in standard session groups(4) and sessions(8) which in session groups.
+(1) When something can be selected, it is lit.
+(2) the user can use the up and down buttons and the power button to select the session
+(3) When the user presses the select button, the session is highlighted and the number flashes.
+(4) Wait five seconds;
+5. CES device: The treatment begins.
+(1) User can adjust the intensity
+6. CES device: The session ends and the current gradually decreases
+Extensions :
+3a. use case 2: Power
+4a. use case 4: Save
+4b.Use case5: recording
+5a. use case 4: Ear-clamp Disconnection
+5b.use case 2: Power
+Use case2: Power
+Primary Actor: CES
+Scope: CES device
+Level: Subfunctions
+Other actor:
+Graph：send warning
+Precondition: The CES device works properly, and the user has pressed the power button.
+Main Success Scenario:
+1. CES device: Low power is detected
+2. Graph：send warning
+3. CES device: No starting session
+1)If user are in a session now: stop in advance
+ 
+Use case3: Ear-clamp Disconnection
+ 
+Primary Actor: CES
+Scope: CES device
+Level: Subfunctions
+Other actor: user:
+Graph：send warning
+Precondition: The CES device works properly, and the user has connect the Ear-clamp.
+Main Success Scenario:
+1. CES detects the ear-clamp disconnect
+2. CES: The 7, 8 buttons flicker and the voltage drops to the safety range
+3. Graph：send warning
+4. Wait for reconnection
+5. If the reconnection succeeds, continue the session
+ 
+ 
+ 
+Use case4:Save button
+ 
+Primary Actor: CES
+Scope: CES device
+Level: Subfunctions
+Other actor: user
+Precondition: The CES device works properly, and the user has select a session setting.
+Main Success Scenario:
+1. The user presses the Save button
+2. CES records user Settings
+3. This custom setting will default when the user re-enters the session group in the future
+ 
+ 
+Use case5: recording
+Primary Actor: CES
+Scope: CES device
+Level: Subfunctions
+Other actor: user
+Precondition: The CES device works properly, and the user has pressed the power button.
+Main Success Scenario:
+1. The user presses the [history] button
+2. CES displays a history of previous sessions
+(1) The user can select any record and start a session
+ 
