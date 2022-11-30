@@ -44,16 +44,16 @@ void MainWindow:: up(){
           tempPushButton->setStyleSheet("background-color: green");
       }
   } else if (current_state == "customize") {
-      int currentTimerCount = 0;
-      currentTimerCount += 30;
-      QTime newTime(0,currentTimerCount/60,currentTimerCount%60);
-      timeString = newTime->toString("mm:ss");
-      scene->addText(timeString);
+//       int currentTimerCount = 0;
+//       currentTimerCount += 30;
+//       QTime newTime(0,currentTimerCount/60,currentTimerCount%60);
+//       timeString = newTime->toString("mm:ss");
+//       scene->addText(timeString);
 
 
-      QTime newTime = Time->addSecs(60*currentTimerCount);
-      Time->setHMS(newTime.hour(),newTime.minute(),newTime.second());
-      ui->countdown->setPlainText(Time->toString("mm:ss"));
+//       QTime newTime = Time->addSecs(60*currentTimerCount);
+//       Time->setHMS(newTime.hour(),newTime.minute(),newTime.second());
+//       ui->countdown->setPlainText(Time->toString("mm:ss"));
 
       }
   current_selected = to_string(temp_current);
@@ -88,16 +88,16 @@ void MainWindow:: down(){
           tempPushButton->setStyleSheet("background-color: green");
       }
   } else if (current_state == "customize") {
-      int currentTimerCount = 0;
-      currentTimerCount += 30;
-      QTime newTime(0,currentTimerCount/60,currentTimerCount%60);
-      timeString = newTime->toString("mm:ss");
-      scene->addText(timeString);
+//       int currentTimerCount = 0;
+//       currentTimerCount += 30;
+//       QTime newTime(0,currentTimerCount/60,currentTimerCount%60);
+//       timeString = newTime->toString("mm:ss");
+//       scene->addText(timeString);
 
 
-      QTime newTime = Time->addSecs(60*currentTimerCount);
-      Time->setHMS(newTime.hour(),newTime.minute(),newTime.second());
-      ui->countdown->setPlainText(Time->toString("mm:ss"));
+//       QTime newTime = Time->addSecs(60*currentTimerCount);
+//       Time->setHMS(newTime.hour(),newTime.minute(),newTime.second());
+//       ui->countdown->setPlainText(Time->toString("mm:ss"));
 
       }
   current_selected = to_string(temp_current);
