@@ -8,18 +8,18 @@ using namespace std;
 class Intensity{   
     public:
         //constructor
-        Intensity();
+        Intensity(int );
         //destructor
         ~Intensity();
 
         //getter
-        bool getName();
-        void setName(); //Change the amount of power to achieve charging and  power consumption
+        bool getlevel();
+        void setlevel(int ); 
 
         //other
         void print();
     private:
-        string name;
+        int level;
         bool Be_selected;
 
         
