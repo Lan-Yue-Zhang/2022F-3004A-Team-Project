@@ -8,13 +8,13 @@ using namespace std;
 class Power{   
     public:
         //constructor
-        Power();
+        Power(int );
         //destructor
         ~Power();
 
         //getter
         int getBattery();
-        void setBattery(); //Change the amount of power to achieve charging and  power consumption
+        void setBattery(int); //Change the amount of power to achieve charging and  power consumption
         bool check();
     
         //other
@@ -26,3 +26,4 @@ class Power{
 };
 
 #endif
+
