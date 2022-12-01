@@ -5,8 +5,8 @@ using namespace std;
 #include "Session.h"
 
 //constructor
-Session::Session(const string& n){
-    name=n;
+Session::Session(int n){
+    time=n;
     Intensities= new Intensity*[8];
 }
 
@@ -16,6 +16,5 @@ Session::~Session(){
 }
 
 //getter
-void Session::setName(string n){name=n;}
-const string& Session::getName(){return name;}
-
+void Session::setTime(int n){time=n;}
+int Session::getTime(){return time;}
