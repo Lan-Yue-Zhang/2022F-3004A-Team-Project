@@ -5,8 +5,8 @@ using namespace std;
 #include "Intensity.h"
 
 //constructor
-Intensity::Intensity(const string& n){
-    name=n;
+Intensity::Intensity(int n){
+    level=n;
     Be_selected=false;
 }
 
@@ -16,8 +16,8 @@ Intensity::~Intensity(){
 }
 
 //getter
-void Intensity::setName(string n){name=n;}
-const string& Intensity::getName(){return name;}
+void Intensity::setlevel(int n){level=n;}
+int Intensity::getlevel(){return level;}
 
 void Intensity::setBe_selected(bool n){Be_selected=n;}
 bool Intensity::getBe_selected(){return Be_selected;}
