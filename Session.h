@@ -8,16 +8,16 @@ using namespace std;
 class Session{   
     public:
         //constructor
-        Session();
+        Session(int);
         //destructor
         ~Session();
 
         //getter
-        bool getName();
-        void setName(); //Change the amount of power to achieve charging and  power consumption
+        bool getTime();
+        void setTime(int);
 
     private:
-        string name;
+        int time;
         Intensity** Intensities;
 
         
